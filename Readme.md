@@ -1,2 +1,7 @@
-#Examples
-My examples and templates projects for diverse programming languages
+# My Examples and Templates
+
+Repositório contendo exemplos, templates e projetos com trechos de códigos para usar como referência.
+
+##Java
+* [JUnit](https://github.com/pablokintopp/Examples/tree/master/java/JUnitExample) - Simples exemplo do uso do JUnit
+
