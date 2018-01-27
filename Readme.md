@@ -8,3 +8,7 @@ Repositório contendo exemplos, templates e projetos com trechos de códigos par
 
 ## DotNet
 * [BDD e SpecFlow](https://github.com/pablokintopp/Examples/tree/master/DotNet/BDD%20with%20SpecFlow/BDDBasketDemo) - BDD em DotNet C# com uso de SpecFlow e NUnit
+
+## PHP
+* [Simples MVC](https://github.com/pablokintopp/Examples/tree/master/PHP/BasicExampleMVC) - Simples exemplo de MVC com PHP
+* [Iniciando com laravel](https://github.com/pablokintopp/Examples/tree/master/PHP/Iniciando_com_Laravel) - Exemplo básico de Laravel
