@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getUser(){
+        
+        return "Get user";
+    }
+
+    public static function listUser(){
+
+        return "Lista de usuarios";
+    }
 }

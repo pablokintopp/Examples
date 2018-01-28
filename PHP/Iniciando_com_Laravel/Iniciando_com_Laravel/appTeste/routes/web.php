@@ -125,5 +125,18 @@ Route::resource('product', 'ProductController');
 //Rota para view home
 Route::get('home', function(){
 
-    return view('home');
+    $users = array(
+        ['name'=>'Pablo'],
+        ['name'=>'Tiburcio'],
+        ['name'=>'Fulano'],
+        ['name'=>'Ciclano'],
+        ['name'=>'Juca']        
+        );
+
+        $books = [];
+
+    return view('home', compact('users','books'));
 });
+
+
+Route::get("user",['uses' => 'UserController@index', 'as' => 'user']);
