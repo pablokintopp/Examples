@@ -11,4 +11,6 @@ public class Constants {
     public  static final String API_KEY = "1f54bd990f1cdfb230adb312546d765d";
 
     public static String  BASE_IMAGE_URL = "http://image.tmdb.org/t/p/w300";
+
+    public static final String SHARED_KEY_TOKEN = "shared_key_token";
 }

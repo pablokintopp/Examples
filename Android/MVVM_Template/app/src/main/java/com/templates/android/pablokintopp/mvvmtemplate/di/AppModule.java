@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import com.google.gson.Gson;
 import com.templates.android.pablokintopp.mvvmtemplate.util.RxBus;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -19,10 +20,17 @@ import dagger.Provides;
 
 @Module
 public class AppModule {
+
     Application app;
 
     public AppModule(Application app) {
         this.app = app;
+    }
+
+    @Provides
+    @Singleton
+    Application provideApplication() {
+        return app;
     }
 
     @Provides
