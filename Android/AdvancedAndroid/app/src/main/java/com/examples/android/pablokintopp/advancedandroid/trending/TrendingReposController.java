@@ -1,25 +1,17 @@
 package com.examples.android.pablokintopp.advancedandroid.trending;
 
-import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.examples.android.pablokintopp.advancedandroid.R;
-import com.examples.android.pablokintopp.advancedandroid.base.BaseController;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
+import com.examples.android.pablokintopp.advancedandroid.R;
+import com.examples.android.pablokintopp.advancedandroid.base.BaseController;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-
-/**
- * Created by Pablo on 08/03/2018.
- */
 
 public class TrendingReposController extends BaseController {
 
@@ -37,26 +29,27 @@ public class TrendingReposController extends BaseController {
     }
 
     @Override
-    protected Disposable[] subscriptions(){
+    protected Disposable[] subscriptions() {
         return new Disposable[]{
                 viewModel.loading()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(loading -> {
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(loading -> {
                     loadingView.setVisibility(loading ? View.VISIBLE : View.GONE);
-                    repoList.setVisibility(loading ? View.GONE : errorText.getVisibility());
+                    repoList.setVisibility(loading ? View.GONE : View.VISIBLE);
+                    errorText.setVisibility(loading ? View.GONE : errorText.getVisibility());
                 }),
                 viewModel.repos()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(((RepoAdapter)repoList.getAdapter())::setData),
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(((RepoAdapter)repoList.getAdapter())::setData),
                 viewModel.error()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(errorRes -> {
-                    if(errorRes == -1){
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(errorRes -> {
+                    if (errorRes == -1) {
                         errorText.setText(null);
                         errorText.setVisibility(View.GONE);
-                    }else{
+                    } else {
                         errorText.setVisibility(View.VISIBLE);
-                        repoList.setVisibility(View.VISIBLE);
+                        repoList.setVisibility(View.GONE);
                         errorText.setText(errorRes);
                     }
                 })

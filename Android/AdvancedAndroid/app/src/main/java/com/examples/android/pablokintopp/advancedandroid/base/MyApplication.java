@@ -2,16 +2,12 @@ package com.examples.android.pablokintopp.advancedandroid.base;
 
 import android.app.Application;
 
-import com.examples.android.pablokintopp.advancedandroid.BuildConfig;
-import com.examples.android.pablokintopp.advancedandroid.di.ActivityInjector;
-
 import javax.inject.Inject;
 
-import timber.log.Timber;
+import com.examples.android.pablokintopp.advancedandroid.BuildConfig;
 
-/**
- * Created by Pablo on 08/03/2018.
- */
+import com.examples.android.pablokintopp.advancedandroid.di.ActivityInjector;
+import timber.log.Timber;
 
 public class MyApplication extends Application {
 
@@ -26,10 +22,9 @@ public class MyApplication extends Application {
         component = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
-
         component.inject(this);
 
-        if(BuildConfig.DEBUG){
+        if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
     }

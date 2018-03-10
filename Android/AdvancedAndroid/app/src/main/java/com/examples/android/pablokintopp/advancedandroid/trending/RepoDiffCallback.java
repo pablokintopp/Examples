@@ -2,15 +2,12 @@ package com.examples.android.pablokintopp.advancedandroid.trending;
 
 import android.support.v7.util.DiffUtil;
 
-import com.examples.android.pablokintopp.advancedandroid.model.Repo;
-
 import java.util.List;
 
-/**
- * Created by Pablo on 09/03/2018.
- */
+import com.examples.android.pablokintopp.advancedandroid.model.Repo;
 
 public class RepoDiffCallback extends DiffUtil.Callback {
+
     private final List<Repo> oldList;
     private final List<Repo> newList;
 

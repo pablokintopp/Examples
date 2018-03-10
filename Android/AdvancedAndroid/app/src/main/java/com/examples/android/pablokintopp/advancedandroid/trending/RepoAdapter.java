@@ -7,19 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.examples.android.pablokintopp.advancedandroid.R;
-import com.examples.android.pablokintopp.advancedandroid.model.Repo;
-
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-/**
- * Created by Pablo on 09/03/2018.
- */
+import com.examples.android.pablokintopp.advancedandroid.R;
+import com.examples.android.pablokintopp.advancedandroid.model.Repo;
 
 class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
 
@@ -44,7 +39,7 @@ class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
 
     @Override
     public int getItemCount() {
-        return  data.size();
+        return data.size();
     }
 
     @Override
@@ -52,42 +47,38 @@ class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
         return data.get(position).id();
     }
 
-
-    void setData(List<Repo> repos){
-        if(repos != null){
-            DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new RepoDiffCallback(data,repos));
+    void setData(List<Repo> repos) {
+        if (repos != null) {
+            DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new RepoDiffCallback(data, repos));
             data.clear();
             data.addAll(repos);
             diffResult.dispatchUpdatesTo(this);
-        }else{
+        } else {
             data.clear();
             notifyDataSetChanged();
         }
     }
 
+    static final class RepoViewHolder extends RecyclerView.ViewHolder {
 
-
-    static final class RepoViewHolder extends RecyclerView.ViewHolder{
-
-        @BindView(R.id.tv_repo_name)TextView repoNameText;
-        @BindView(R.id.tv_repo_description)TextView repoDescriptionText;
-        @BindView(R.id.tv_fork_count)TextView forkCountText;
-        @BindView(R.id.tv_star_count)TextView starCountText;
+        @BindView(R.id.tv_repo_name) TextView repoNameText;
+        @BindView(R.id.tv_repo_description) TextView repoDescriptionText;
+        @BindView(R.id.tv_fork_count) TextView forkCountText;
+        @BindView(R.id.tv_star_count) TextView starCountText;
 
         private Repo repo;
 
-
-        public RepoViewHolder(View itemView, RepoClickedListener listener) {
+        RepoViewHolder(View itemView, RepoClickedListener listener) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(v -> {
-                if(repo != null){
+                if (repo != null) {
                     listener.onRepoClicked(repo);
                 }
             });
         }
 
-        void bind(Repo repo){
+        void bind(Repo repo) {
             this.repo = repo;
             repoNameText.setText(repo.name());
             repoDescriptionText.setText(repo.description());
@@ -96,7 +87,8 @@ class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
         }
     }
 
-    interface RepoClickedListener{
+    interface RepoClickedListener {
+
         void onRepoClicked(Repo repo);
     }
 }
