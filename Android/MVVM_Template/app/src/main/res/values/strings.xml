@@ -1,7 +1,21 @@
 <resources>
-    <string name="app_name">MVVM Template</string>
+    <string name="app_name">Mvvm Template</string>
+
+    <string name="login">Login</string>
+
+    <string name="hint_search_tag">Search </string>
+
+    <string name="tag">#%1$s</string>
+    <string name="post_count">%1$s post</string>
+    <string name="like_count">%1$s likes</string>
+
+    <string name="dialog_loading_title">Loading</string>
+    <string name="dialog_loading_content">Please wait.Loading.</string>
+
+    <string name="dialog_error_title">Error</string>
+    <string name="dialog_error_content">Error loading content.</string>
+    <string name="dialog_action_ok">OK</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hint_search">Search</string>
 </resources>
