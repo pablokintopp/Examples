@@ -70,8 +70,10 @@ public class RepoListViewModel extends BaseObservable {
         this.searchText = searchText;
         notifyPropertyChanged(R.id.searchEditText);
 
-        if(this.searchText.trim().length() > 2)
+        if(this.searchText.trim().length() > 2){
             publishSubject.onNext(this.searchText);
+
+        }
     }
 
     public void stop() {

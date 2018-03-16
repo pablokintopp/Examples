@@ -6,7 +6,7 @@ import pablokintopp.com.mvvmtemplate.di.app.AppComponent;
 import pablokintopp.com.mvvmtemplate.view.main.MainActivity;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 @Activity
 @Component(dependencies = AppComponent.class, modules = MainModule.class)

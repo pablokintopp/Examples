@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import rx.Observable;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 public class PreferencesHelperImpl<T> implements PreferencesHelper<T> {

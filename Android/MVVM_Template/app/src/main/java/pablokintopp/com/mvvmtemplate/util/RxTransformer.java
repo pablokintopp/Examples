@@ -5,7 +5,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 public class RxTransformer {

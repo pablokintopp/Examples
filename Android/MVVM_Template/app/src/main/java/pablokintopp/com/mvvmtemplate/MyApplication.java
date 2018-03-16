@@ -8,7 +8,7 @@ import pablokintopp.com.mvvmtemplate.di.app.DaggerAppComponent;
 import pablokintopp.com.mvvmtemplate.di.app.NetworkModule;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 public class MyApplication extends Application {

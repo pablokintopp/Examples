@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 /**
- * Created by mertsimsek on 14/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 @Parcel
 public class User {

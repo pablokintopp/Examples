@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
 
     <data>
 
@@ -17,12 +18,58 @@
         android:background="@color/colorWhite">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin_16"
-            android:textColor="@color/colorPrimary"
+            android:padding="@dimen/margin_16"
             android:text="@{viewModel.repoUrl}"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_16"
+            android:text="@{viewModel.repoDesc}"
+            android:textColor="@color/colorGrayLight"
+            android:textSize="@dimen/text_size_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_16"
+            >
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/dimen_56"
+                android:layout_height="@dimen/dimen_56"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                bind:imageUrl="@{viewModel.userImageUrl}"
+                bind:placeHolder="@{@drawable/bg_image}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_16"
+                android:layout_alignTop="@id/user_image"
+                android:layout_toRightOf="@id/user_image"
+                android:text="@{viewModel.userName}"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_medium" />
+
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_16"
+            android:text="@{viewModel.userUrl}"
+            android:textColor="@color/colorGrayLight"
+
+            android:textSize="@dimen/text_size_small" />
 
 
 

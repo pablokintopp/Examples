@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.repodetail.RepoDetailActivity"/>
+        <activity android:name=".view.repodetail.RepoDetailActivity"
+            />
     </application>
 
 </manifest>

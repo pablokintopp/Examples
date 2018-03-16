@@ -7,7 +7,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import pablokintopp.com.mvvmtemplate.R;
 
 /**
- * Created by mertsimsek on 15/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 public class DialogBuilder {

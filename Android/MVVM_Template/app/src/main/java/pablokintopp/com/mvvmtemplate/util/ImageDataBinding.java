@@ -8,7 +8,7 @@ import com.squareup.picasso.Picasso;
 
 
 /**
- * Created by mertsimsek on 14/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 public class ImageDataBinding {
@@ -16,12 +16,12 @@ public class ImageDataBinding {
     @BindingAdapter({"bind:imageUrl", "bind:placeHolder"})
     public static void loadImage(ImageView view, String url, Drawable placeHolder) {
         if (url != null && !url.equals(""))
-            Picasso.with(view.getContext()).load(url).placeholder(placeHolder).resize(500, 500).centerCrop().into(view);
+            Picasso.with(view.getContext()).load(url).placeholder(placeHolder).into(view);
     }
 
     @BindingAdapter({"bind:circleLibImageUrl", "bind:circleLibPlaceHolder"})
     public static void loadCircleImage(ImageView view, String url, Drawable placeHolder) {
         if (url != null && !url.equals(""))
-            Picasso.with(view.getContext()).load(url).placeholder(placeHolder).resize(500, 500).centerCrop().into(view);
+            Picasso.with(view.getContext()).load(url).placeholder(placeHolder).into(view);
     }
 }

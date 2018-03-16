@@ -26,7 +26,7 @@ import pablokintopp.com.mvvmtemplate.viewmodel.repodetail.RepoDetailViewModel;
 
 public class RepoDetailFragment  extends Fragment{
     public static final String KEY_REPO = "key_repo";
-    public static final String KEY_STATE = "key_state";
+
 
     FragmentRepoDetailBinding binding;
 

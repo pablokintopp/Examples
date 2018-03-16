@@ -1,10 +1,8 @@
 # Android MVVM Starter Template 
-Sample Android/Java MVVM  template prepared to consume a Rest API.
+Android/Java MVVM template consuming a few resources from the GitHub Api.
 
-#Screenshots
-ToDO
 
-#Technology
+## Technology
 * MVVM architecture
 * [Android Databinding](https://developer.android.com/topic/libraries/data-binding/index.html)
 * [Dagger 2](https://google.github.io/dagger/)
@@ -13,7 +11,8 @@ ToDO
 * [Retfofit](https://square.github.io/retrofit/)
 * [Picasso](http://square.github.io/picasso/)
 
+## Screenshots
+ToDO
 
-#Setup
-ToDo
+
 

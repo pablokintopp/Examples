@@ -3,6 +3,7 @@ package pablokintopp.com.mvvmtemplate.view.repolist;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -58,6 +59,11 @@ public class RepoListFragment extends Fragment implements RepoListViewModel.Repo
 
         if (savedInstanceState == null)
             viewModel.loadRepos();
+        else {
+            viewModel.isLoading.set(false);
+            viewModel.refreshEnabled.set(false);
+            adapter.setRepos(Parcels.unwrap(savedInstanceState.getParcelable(KEY_STATE_LIST)));
+        }
 
 
         return binding.getRoot();

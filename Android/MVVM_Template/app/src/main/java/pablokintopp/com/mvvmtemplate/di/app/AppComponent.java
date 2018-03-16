@@ -11,7 +11,7 @@ import pablokintopp.com.mvvmtemplate.model.api.ApiSource;
 import pablokintopp.com.mvvmtemplate.util.RxBus;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 
 @Singleton

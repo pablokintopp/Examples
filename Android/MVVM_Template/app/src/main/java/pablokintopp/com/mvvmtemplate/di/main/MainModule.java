@@ -7,7 +7,7 @@ import pablokintopp.com.mvvmtemplate.util.RxBus;
 import pablokintopp.com.mvvmtemplate.viewmodel.main.MainViewModel;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo on 13/01/17.
  */
 @Module
 public class MainModule {

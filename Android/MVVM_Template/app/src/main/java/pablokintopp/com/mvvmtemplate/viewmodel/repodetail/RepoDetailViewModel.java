@@ -15,6 +15,7 @@ public class RepoDetailViewModel {
     public ObservableField<String> repoUrl;
     public ObservableField<String> userName;
     public ObservableField<String> userUrl;
+    public ObservableField<String> userImageUrl;
 
     private Repo repo;
 
@@ -25,5 +26,6 @@ public class RepoDetailViewModel {
         userName = new ObservableField<>(repo.owner.username);
         userUrl = new ObservableField<>(repo.owner.url);
         repoUrl = new ObservableField<>(repo.url);
+        userImageUrl = new ObservableField<>(repo.owner.profilePicture);
     }
 }

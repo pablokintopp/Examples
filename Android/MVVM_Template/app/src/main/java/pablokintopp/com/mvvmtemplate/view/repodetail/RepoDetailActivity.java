@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.MenuItem;
 
 import org.parceler.Parcels;
 
@@ -13,7 +15,7 @@ import pablokintopp.com.mvvmtemplate.R;
 import pablokintopp.com.mvvmtemplate.model.api.entity.Repo;
 
 /**
- * Created by mertsimsek on 13/01/17.
+ * Created by Pablo Kintopp, Mar 2018.
  */
 public class RepoDetailActivity extends AppCompatActivity {
 
@@ -41,5 +43,17 @@ public class RepoDetailActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.containerDetail, RepoDetailFragment.newInstance(repo))
                     .commitAllowingStateLoss();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(getClass().getSimpleName(), "Clicked: "+item.getItemId());
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
