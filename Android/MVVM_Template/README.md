@@ -12,7 +12,9 @@ Android/Java MVVM template consuming a few resources from the GitHub Api.
 * [Picasso](http://square.github.io/picasso/)
 
 ## Screenshots
-ToDO
+<img src="https://github.com/pablokintopp/Portfolio/blob/master/Android/MVVM_Template/screeshots/01.PNG" width="31%"  align="left"/>
+<img src="https://github.com/pablokintopp/Portfolio/blob/master/Android/MVVM_Template/screeshots/02.PNG"  width="31%"  align="left"/>
+<img src="https://github.com/pablokintopp/Portfolio/blob/master/Android/MVVM_Template/screeshots/03.PNG"  width="31%" />
 
 
 
